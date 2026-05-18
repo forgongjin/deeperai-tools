@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+.Learnings/
+memory/
+MEMORY.md
+USER.md
+SOUL.md
+TOOLS.md
+IDENTITY.md
+HEARTBEAT.md
+BOOTSTRAP.md
+AGENTS.md
+OPC-PLAYBOOK.md
+WARCHEST.md
+*.wav
+*.log

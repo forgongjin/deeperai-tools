@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旺财工具箱 - 免费在线实用工具集合</title>
+  <meta name="description" content="免费在线图片压缩、PDF处理、格式转换工具集 — 所有处理在本地完成，不上传服务器">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box }
+    :root {
+      --bg: #0f1117; --card: #1a1d27; --border: #2a2d3a;
+      --text: #e1e4ed; --sub: #8b8fa3; --accent: #6366f1;
+      --green: #22c55e; --orange: #f97316; --pink: #ec4899;
+    }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg); color: var(--text); min-height:100vh;
+    }
+    .header {
+      text-align:center; padding:64px 24px 40px;
+      background: linear-gradient(180deg, rgba(99,102,241,0.08) 0%, transparent 100%);
+    }
+    .header .logo { font-size:3rem; margin-bottom:12px }
+    .header h1 { font-size:2.5rem; font-weight:800 }
+    .header h1 span.indigo { color:#6366f1 }
+    .header h1 span.orange { color:#f97316 }
+    .header p { color:var(--sub); font-size:1.1rem; margin-top:8px; max-width:500px; margin-left:auto; margin-right:auto }
+    .container { max-width:900px; margin:0 auto; padding:0 24px 64px }
+
+    .tool-grid {
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap:16px; margin-top:32px;
+    }
+    .tool-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:16px; padding:24px; text-decoration:none; color:var(--text);
+      transition:all .2s; position:relative; overflow:hidden;
+      cursor:pointer;
+    }
+    .tool-card:hover { 
+      transform:translateY(-3px); border-color:var(--accent);
+      box-shadow: 0 8px 30px rgba(99,102,241,0.12);
+    }
+    .tool-card .icon { font-size:2.2rem; margin-bottom:12px }
+    .tool-card h3 { font-size:1.15rem; font-weight:600; margin-bottom:6px }
+    .tool-card p { color:var(--sub); font-size:0.85rem; line-height:1.5 }
+    .tool-card .tag {
+      display:inline-block; font-size:0.7rem; padding:3px 8px;
+      border-radius:6px; font-weight:600; margin-top:10px;
+    }
+    .tool-card .tag.new { background:rgba(34,197,94,0.12); color:var(--green) }
+    .tool-card .tag.free { background:rgba(99,102,241,0.12); color:var(--accent) }
+    .tool-card .tag.pro { background:rgba(249,115,22,0.12); color:var(--orange) }
+    .tool-card .tag.hot { background:rgba(239,68,68,0.12); color:#ef4444 }
+
+    .tool-card.highlight {
+      border-color: var(--orange);
+      background: linear-gradient(135deg, rgba(249,115,22,0.08), transparent);
+    }
+    .tool-card.highlight .icon { filter: drop-shadow(0 0 8px rgba(249,115,22,0.3)) }
+
+    .section { margin-top:48px }
+    .section h2 { font-size:1.4rem; font-weight:700; margin-bottom:16px; display:flex; align-items:center; gap:8px }
+
+    .pro-cta {
+      text-align:center; padding:40px 24px; margin-top:48px;
+      background:linear-gradient(135deg, rgba(99,102,241,0.12), rgba(249,115,22,0.1));
+      border-radius:20px; border:1px solid rgba(99,102,241,0.2);
+    }
+    .pro-cta h2 { font-size:1.6rem; margin-bottom:8px }
+    .pro-cta h2 span { background:linear-gradient(135deg, #6366f1, #ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
+    .pro-cta p { color:var(--sub); margin-bottom:20px; font-size:0.95rem }
+    .pro-cta .price-badge {
+      font-size:2rem; font-weight:800; color:#f59e0b; margin-bottom:4px;
+    }
+    .pro-cta .price-note { color:var(--sub); font-size:0.8rem; margin-bottom:20px }
+    .pro-cta .btn-buy {
+      display:inline-block; background:linear-gradient(135deg, #f59e0b, #f97316);
+      color:#000; padding:14px 48px; border-radius:12px; font-size:1.1rem;
+      font-weight:700; text-decoration:none; transition:transform .2s;
+    }
+    .pro-cta .btn-buy:hover { transform:scale(1.03) }
+
+    .footer { text-align:center; color:var(--sub); font-size:0.8rem; margin-top:48px; padding:24px }
+
+    @media (max-width:600px) {
+      .header h1 { font-size:1.8rem }
+      .tool-grid { grid-template-columns:1fr }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">💰</div>
+    <h1>旺财<span class="indigo">工具</span><span class="orange">箱</span></h1>
+    <p>免费在线工具集 · 本地处理保护隐私 · 无需下载 · 用完即走</p>
+  </div>
+
+  <div class="container">
+    <!-- Featured -->
+    <div class="section">
+      <h2>🔥 热门工具</h2>
+      <div class="tool-grid">
+        <a href="https://deeperai.cloud/image-toolbox" class="tool-card highlight">
+          <div class="icon">🖼️</div>
+          <h3>图压 - 图片压缩工具箱</h3>
+          <p>批量压缩、格式转换、调整尺寸。支持 JPG/PNG/WebP，全部本地处理</p>
+          <span class="tag hot">🔥 热门</span>
+          <span class="tag free">免费</span>
+        </a>
+
+        <a href="https://deeperai.cloud/pdf-toolbox" class="tool-card">
+          <div class="icon">📄</div>
+          <h3>PDF轻处理</h3>
+          <p>合并、拆分、提取页面、压缩、加水印。无需上传，浏览器直接处理</p>
+          <span class="tag new">🆕 新品</span>
+          <span class="tag free">免费</span>
+        </a>
+
+        <div class="tool-card" style="opacity:0.5;cursor:default">
+          <div class="icon">🏷️</div>
+          <h3>链接聚合页</h3>
+          <p>一站式社交链接页面，类似 Linktree 的国内版</p>
+          <span class="tag pro">开发中</span>
+        </div>
+
+        <div class="tool-card" style="opacity:0.5;cursor:default">
+          <div class="icon">📝</div>
+          <h3>小红书排版助手</h3>
+          <p>一键排版、添加 Emoji、字数控制、预览效果</p>
+          <span class="tag pro">规划中</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Us -->
+    <div class="section">
+      <h2>💡 为什么选择我们</h2>
+      <div class="tool-grid">
+        <div class="tool-card" style="cursor:default">
+          <div class="icon">🔒</div>
+          <h3>隐私安全</h3>
+          <p>所有文件只在你的浏览器中处理，没有任何数据上传到服务器</p>
+        </div>
+        <div class="tool-card" style="cursor:default">
+          <div class="icon">⚡</div>
+          <h3>即开即用</h3>
+          <p>无需注册、无需下载、无需登录，打开网页就能用</p>
+        </div>
+        <div class="tool-card" style="cursor:default">
+          <div class="icon">📱</div>
+          <h3>全平台支持</h3>
+          <p>手机、平板、电脑都能用，随时随地处理文件</p>
+        </div>
+        <div class="tool-card" style="cursor:default">
+          <div class="icon">🆓</div>
+          <h3>基本功能免费</h3>
+          <p>日常使用完全免费；付费版本解锁高级功能和去限制</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pro CTA -->
+    <div class="pro-cta">
+      <h2><span>旺财 Pro 全家桶</span></h2>
+      <p>一个订阅，解锁所有工具的 Pro 功能</p>
+      <div class="price-badge">¥29</div>
+      <div class="price-note">永久买断 · 所有工具通用 · 持续更新</div>
+      <a href="https://wangcaioc.lemonsqueezy.com/checkout/buy/695a1fd3-cb87-4e67-9248-d19572c70d0b" class="btn-buy" target="_blank">💰 立即购买 Pro 全家桶</a>
+    </div>
+
+    <div class="footer">
+      旺财工具箱 · 所有工具均使用浏览器本地计算 · 你的数据你做主
+    </div>
+  </div>
+</body>
+</html>
