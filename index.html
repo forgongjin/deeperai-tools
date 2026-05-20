@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>旺财工具箱 - 免费在线实用工具集合</title>
   <meta name="description" content="免费在线图片压缩、PDF处理、格式转换工具集 — 所有处理在本地完成，不上传服务器">
+  <script src="https://assets.lemonsqueezy.com/lemonsqueezy.js" defer></script>
   <style>
     * { margin:0; padding:0; box-sizing:border-box }
     :root {
@@ -166,12 +167,17 @@
       <p>一个订阅，解锁所有工具的 Pro 功能</p>
       <div class="price-badge">¥29</div>
       <div class="price-note">永久买断 · 所有工具通用 · 持续更新</div>
-      <a href="https://wangcaioc.lemonsqueezy.com/checkout/buy/695a1fd3-cb87-4e67-9248-d19572c70d0b" class="btn-buy" target="_blank">💰 立即购买 Pro 全家桶</a>
+      <button class="btn-buy" onclick="handleBuy()" style="border:none;cursor:pointer">💰 立即购买 Pro 全家桶</button>
     </div>
 
     <div class="footer">
       旺财工具箱 · 所有工具均使用浏览器本地计算 · 你的数据你做主
     </div>
   </div>
+  <script>
+    function handleBuy() {
+      LemonSqueezy.Url.Open('https://wangcaioc.lemonsqueezy.com/checkout/buy/695a1fd3-cb87-4e67-9248-d19572c70d0b')
+    }
+  </script>
 </body>
 </html>

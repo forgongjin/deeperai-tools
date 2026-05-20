@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>图压 - 图片压缩 & 格式转换工具箱</title>
   <meta name="description" content="免费在线图片压缩、格式转换、批量处理 — 无需上传服务器，本地处理保护隐私">
+  <script src="https://assets.lemonsqueezy.com/lemonsqueezy.js" defer></script>
   <style>
     * { margin:0; padding:0; box-sizing:border-box }
     :root {
@@ -252,7 +253,7 @@
     <div class="pro-banner">
       <h3>🚀 图压 Pro</h3>
       <p>无限批量处理 · API接入 · 自动抠图 · 水印添加 · ¥6 永久买断</p>
-      <a href="https://wangcaioc.lemonsqueezy.com/checkout/buy/d5002c32-5e24-413d-a261-6415e40aca90" class="btn-pro" target="_blank">升级 Pro →</a>
+      <button class="btn-pro" onclick="handleBuy()" style="border:none;cursor:pointer">升级 Pro →</button>
     </div>
 
     <div class="footer">
@@ -322,7 +323,7 @@
 
     function handleBuy() {
       const checkoutUrl = 'https://wangcaioc.lemonsqueezy.com/checkout/buy/d5002c32-5e24-413d-a261-6415e40aca90'
-      window.open(checkoutUrl, '_blank')
+      LemonSqueezy.Url.Open(checkoutUrl)
     }
 
     function activatePro() {

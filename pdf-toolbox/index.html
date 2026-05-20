@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDF轻处理 - 在线PDF工具箱</title>
   <meta name="description" content="免费在线PDF处理：合并、拆分、压缩、提取页面、加水印 — 所有处理在本地完成，不上传服务器">
+  <script src="https://assets.lemonsqueezy.com/lemonsqueezy.js" defer></script>
   <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
   <style>
     * { margin:0; padding:0; box-sizing:border-box }
@@ -284,7 +285,7 @@
     <div class="pro-banner">
       <h3>🚀 PDF轻处理 Pro</h3>
       <p>无限制使用 · 无水印 · 批量处理 · API接入 · 图片转PDF · ¥9 永久买断</p>
-      <a href="https://wangcaioc.lemonsqueezy.com/checkout/buy/8a14d795-4c43-4e16-92a4-c27f47cfe439" class="btn-pro" target="_blank">升级 Pro →</a>
+      <button class="btn-pro" onclick="handleBuy()" style="border:none;cursor:pointer">升级 Pro →</button>
     </div>
 
     <div class="footer">PDF轻处理 · 你的文件你的隐私 · 所有处理仅限浏览器本地</div>
@@ -589,6 +590,10 @@
     setupDropZone('compressZone', 'compressInput', 'compress')
     setupDropZone('wmZone', 'wmInput', 'watermark')
     renderMergeList()
+
+    function handleBuy() {
+      LemonSqueezy.Url.Open('https://wangcaioc.lemonsqueezy.com/checkout/buy/8a14d795-4c43-4e16-92a4-c27f47cfe439')
+    }
   </script>
 </body>
 </html>
