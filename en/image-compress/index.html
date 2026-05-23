@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Image Compressor — Compress JPG, PNG, WebP | No Upload</title>
+  <meta name="description" content="Free online image compressor. Batch compress JPG, PNG, WebP images. All processing done locally in your browser — no files uploaded to any server. Fast, private, unlimited.">
+  <meta name="keywords" content="image compressor,compress image online,compress JPG,compress PNG,compress WebP,batch image compression,free image compressor,reduce image size,online image optimizer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://deeperai.cloud/en/image-compress/">
+  <meta property="og:title" content="Free Online Image Compressor — Compress JPG, PNG, WebP">
+  <meta property="og:description" content="Batch compress images online for free. JPG, PNG, WebP — all processing happens locally in your browser. No upload, 100% private.">
+  <meta property="og:url" content="https://deeperai.cloud/en/image-compress/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Image Compressor — Compress JPG, PNG, WebP">
+  <meta name="twitter:description" content="Private, browser-based image compression. Drag & drop, batch process, instant download.">
+  <!-- AdSense placeholder — replace pub-id when approved -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Online Image Compressor",
+    "description": "Free online image compression tool. Batch compress JPG, PNG, and WebP images directly in your browser with no upload required.",
+    "url": "https://deeperai.cloud/en/image-compress",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "inLanguage": "en",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box }
+    :root {
+      --bg: #0f1117; --card: #1a1d27; --border: #2a2d3a;
+      --text: #e1e4ed; --sub: #8b8fa3; --accent: #6366f1;
+      --accent-hover: #818cf8; --green: #22c55e; --red: #ef4444;
+    }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg); color: var(--text); min-height:100vh;
+    }
+    .header {
+      text-align:center; padding: 48px 24px 32px;
+    }
+    .header h1 { font-size:2.2rem; font-weight:700; margin-bottom:8px }
+    .header h1 span { color:var(--accent) }
+    .header p { color:var(--sub); font-size:1.05rem }
+    .container { max-width:800px; margin:0 auto; padding:0 24px 48px }
+
+    /* Ad slots */
+    .ad-banner {
+      text-align:center; margin:0 auto 24px; max-width:728px; min-height:90px;
+      background:var(--card); border:1px dashed var(--border); border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--sub); font-size:0.8rem;
+    }
+
+    /* Upload zone */
+    .upload-zone {
+      border: 2px dashed var(--border); border-radius:16px;
+      padding:48px 24px; text-align:center; cursor:pointer;
+      transition: all .2s; margin-bottom:24px; background:var(--card);
+    }
+    .upload-zone:hover, .upload-zone.drag-over {
+      border-color:var(--accent); background:rgba(99,102,241,0.05);
+    }
+    .upload-zone .icon { font-size:3rem; margin-bottom:16px }
+    .upload-zone .btn {
+      display:inline-block; background:var(--accent); color:#fff;
+      padding:10px 24px; border-radius:8px; font-weight:600;
+      margin-bottom:12px; cursor:pointer; transition: background .2s;
+    }
+    .upload-zone .btn:hover { background:var(--accent-hover) }
+    .upload-zone .tip { color:var(--sub); font-size:0.85rem }
+
+    /* Settings */
+    .settings {
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap:12px; margin-bottom:24px;
+    }
+    .setting-group {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:14px 16px;
+    }
+    .setting-group label {
+      display:block; font-size:0.8rem; color:var(--sub); margin-bottom:6px;
+    }
+    .setting-group select, .setting-group input {
+      width:100%; background:var(--bg); color:var(--text);
+      border:1px solid var(--border); border-radius:6px;
+      padding:8px 10px; font-size:0.9rem;
+    }
+    .setting-group input[type="range"] {
+      padding:0; border:none; cursor:pointer;
+    }
+
+    /* File list */
+    .file-list {
+      display:flex; flex-direction:column; gap:8px; margin-bottom:24px;
+    }
+    .file-item {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:12px; padding:14px 16px;
+      display:flex; align-items:center; gap:12px;
+    }
+    .file-item .thumb {
+      width:48px; height:48px; border-radius:8px; object-fit:cover;
+      background:var(--bg); flex-shrink:0;
+    }
+    .file-item .info { flex:1; min-width:0 }
+    .file-item .name { font-weight:500; font-size:0.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .file-item .meta { font-size:0.8rem; color:var(--sub) }
+    .file-item .result { font-size:0.8rem; color:var(--green); font-weight:500 }
+    .file-item .result.fail { color:var(--red) }
+    .file-item .remove {
+      background:none; border:none; color:var(--sub); cursor:pointer;
+      font-size:1.2rem; padding:4px; opacity:0.5; transition:opacity .2s;
+    }
+    .file-item .remove:hover { opacity:1; color:var(--red) }
+
+    /* Actions */
+    .actions {
+      display:flex; gap:12px; justify-content:center;
+      margin-bottom:32px; flex-wrap:wrap;
+    }
+    .btn-process {
+      background:var(--accent); color:#fff; border:none;
+      padding:12px 36px; border-radius:10px; font-size:1rem;
+      font-weight:600; cursor:pointer; transition:all .2s;
+    }
+    .btn-process:hover:not(:disabled) { background:var(--accent-hover); transform:translateY(-1px) }
+    .btn-process:disabled { opacity:0.4; cursor:not-allowed }
+    .btn-process.processing { background:var(--accent); animation: pulse 1.5s infinite }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+
+    .btn-download {
+      background:var(--green); color:#000; border:none;
+      padding:12px 36px; border-radius:10px; font-size:1rem;
+      font-weight:600; cursor:pointer; transition:all .2s;
+      display:none;
+    }
+    .btn-download.show { display:inline-block }
+    .btn-download:hover { filter:brightness(1.1); transform:translateY(-1px) }
+
+    /* Stats */
+    .stats {
+      display:flex; gap:16px; justify-content:center;
+      flex-wrap:wrap; margin-bottom:32px;
+    }
+    .stat {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:10px; padding:16px 24px; text-align:center;
+    }
+    .stat .value { font-size:1.5rem; font-weight:700; color:var(--accent) }
+    .stat .label { font-size:0.8rem; color:var(--sub); margin-top:4px }
+
+    /* SEO content section */
+    .seo-content {
+      max-width:800px; margin:48px auto 0; padding:32px 24px;
+      border-top:1px solid var(--border);
+    }
+    .seo-content h2 { font-size:1.4rem; margin-bottom:16px; color:var(--text) }
+    .seo-content h3 { font-size:1.1rem; margin:20px 0 10px; color:var(--text) }
+    .seo-content p { color:var(--sub); line-height:1.7; margin-bottom:12px; font-size:0.95rem }
+    .seo-content ul { color:var(--sub); margin-left:20px; margin-bottom:16px; line-height:1.8 }
+    .seo-content li { margin-bottom:4px }
+
+    .footer { text-align:center; color:var(--sub); font-size:0.8rem; margin-top:24px; }
+    .footer a { color:var(--sub); margin:0 8px }
+    .hidden { display:none !important }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Free Online <span>Image Compressor</span></h1>
+    <p>Batch compress images · Format conversion · Resize — all processing happens locally in your browser</p>
+  </div>
+
+  <div class="container">
+    <!-- AdSense Banner (top) — activates after approval -->
+    <!-- <div class="ad-banner">AdSense Banner 728×90 — coming soon</div> -->
+
+    <!-- Upload Zone -->
+    <div class="upload-zone" id="uploadZone">
+      <div class="icon">📁</div>
+      <div class="btn" onclick="document.getElementById('fileInput').click()">Select Images</div>
+      <div class="tip">or drag & drop images here · Supports JPG / PNG / WebP / SVG / GIF · Free for up to 20 images per batch</div>
+      <input type="file" id="fileInput" multiple accept="image/*" class="hidden">
+    </div>
+
+    <!-- Settings -->
+    <div class="settings hidden" id="settings">
+      <div class="setting-group">
+        <label>Output Format</label>
+        <select id="format">
+          <option value="auto">Keep Original</option>
+          <option value="image/jpeg">JPEG</option>
+          <option value="image/png">PNG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>Quality: <span id="qualityLabel">80%</span></label>
+        <input type="range" id="quality" min="10" max="100" value="80">
+      </div>
+      <div class="setting-group">
+        <label>Max Width (px, 0=original)</label>
+        <input type="number" id="maxWidth" value="0" min="0" step="100">
+      </div>
+    </div>
+
+    <!-- File List -->
+    <div class="file-list" id="fileList"></div>
+
+    <!-- Stats -->
+    <div class="stats hidden" id="stats">
+      <div class="stat">
+        <div class="value" id="statTotal">0</div>
+        <div class="label">Files Processed</div>
+      </div>
+      <div class="stat">
+        <div class="value" id="statBefore">0 KB</div>
+        <div class="label">Before</div>
+      </div>
+      <div class="stat">
+        <div class="value" id="statAfter">0 KB</div>
+        <div class="label">After</div>
+      </div>
+      <div class="stat">
+        <div class="value" id="statSaved">0%</div>
+        <div class="label">Space Saved</div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn-process" id="btnProcess" onclick="processAll()">🚀 Compress Images</button>
+      <button class="btn-download" id="btnDownload" onclick="downloadAll()">⬇ Download All</button>
+    </div>
+
+    <!-- AdSense Banner (middle) — activates after approval -->
+    <!-- <div class="ad-banner">AdSense Banner 728×90 — coming soon</div> -->
+
+    <div class="footer">
+      <a href="/en/about.html">About</a> ·
+      <a href="/en/contact.html">Contact</a> ·
+      <a href="/en/privacy.html">Privacy Policy</a>
+      <br>
+      Free Image Compressor · Your privacy matters · All images processed locally in your browser
+    </div>
+  </div>
+
+  <!-- SEO Content Section -->
+  <div class="seo-content">
+    <h2>Free Online Image Compressor — No Upload Required</h2>
+    <p>Need to reduce image file sizes without losing quality? Our <strong>free online image compressor</strong> lets you batch compress JPG, PNG, and WebP images directly in your browser. No files are ever uploaded to any server — everything happens locally on your device, keeping your images 100% private and secure.</p>
+    
+    <h3>Why Compress Your Images?</h3>
+    <ul>
+      <li><strong>Faster website loading:</strong> Smaller images mean faster page speeds, better SEO rankings, and improved user experience.</li>
+      <li><strong>Save storage space:</strong> Reduce image file sizes by up to 80% without noticeable quality loss.</li>
+      <li><strong>Easier sharing:</strong> Compressed images are easier to email, upload to social media, or send via messaging apps.</li>
+      <li><strong>Better for e-commerce:</strong> Optimized product images load faster and convert better on online stores.</li>
+    </ul>
+
+    <h3>How It Works</h3>
+    <p>1. Drag and drop your images (or click to select) — supports JPG, PNG, WebP, SVG, and GIF.<br>
+    2. Adjust quality and output format settings if needed.<br>
+    3. Click "Compress Images" — processing happens instantly in your browser.<br>
+    4. Download your optimized images individually or all at once.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li><strong>100% Private:</strong> No upload, no server — your images never leave your device.</li>
+      <li><strong>Batch Processing:</strong> Compress up to 20 images at once (free tier).</li>
+      <li><strong>Format Conversion:</strong> Convert between JPG, PNG, and WebP formats.</li>
+      <li><strong>Quality Control:</strong> Adjust compression level from 10% to 100%.</li>
+      <li><strong>Image Resizing:</strong> Set maximum width to resize large images automatically.</li>
+      <li><strong>Works Everywhere:</strong> Desktop, tablet, mobile — fully responsive design.</li>
+    </ul>
+
+    <h3>Image Compression vs File Compression (ZIP/RAR)</h3>
+    <p>Tools like ZIP and RAR are designed for general-purpose file archiving. They achieve very little compression on already-compressed formats like JPEG and PNG (typically only 5-15% reduction). Our image compressor uses intelligent lossy compression algorithms specifically designed for images, achieving 50-80% file size reduction with minimal quality loss.</p>
+  </div>
+
+  <script>
+    const MAX_FREE = 20
+    const state = { files: [], results: [] }
+
+    function addFiles(fileList) {
+      const newFiles = Array.from(fileList).filter(f => f.type.startsWith('image/'))
+      const totalAfter = state.files.length + newFiles.length
+
+      if (totalAfter > MAX_FREE) {
+        const remaining = MAX_FREE - state.files.length
+        if (remaining > 0) {
+          for (let i = 0; i < remaining; i++) {
+            state.files.push(newFiles[i])
+            state.results.push(null)
+          }
+        }
+        alert(`Free tier limit: ${MAX_FREE} images per batch. You selected ${totalAfter} images. Only the first ${MAX_FREE} were added.`)
+      } else {
+        for (const file of newFiles) {
+          state.files.push(file)
+          state.results.push(null)
+        }
+      }
+      render()
+    }
+
+    // Drag & Drop
+    const zone = document.getElementById('uploadZone')
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over') })
+    zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'))
+    zone.addEventListener('drop', e => {
+      e.preventDefault(); zone.classList.remove('drag-over')
+      addFiles(e.dataTransfer.files)
+    })
+
+    document.getElementById('fileInput').addEventListener('change', e => addFiles(e.target.files))
+    document.getElementById('quality').addEventListener('input', e => {
+      document.getElementById('qualityLabel').textContent = e.target.value + '%'
+    })
+
+    function removeFile(index) {
+      state.files.splice(index, 1)
+      state.results.splice(index, 1)
+      render()
+    }
+
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B'
+      if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB'
+      return (bytes/(1024*1024)).toFixed(2) + ' MB'
+    }
+
+    function render() {
+      const list = document.getElementById('fileList')
+      const hasFiles = state.files.length > 0
+      document.getElementById('settings').classList.toggle('hidden', !hasFiles)
+      document.getElementById('stats').classList.toggle('hidden', !hasFiles)
+      document.getElementById('btnProcess').classList.toggle('hidden', !hasFiles)
+
+      list.innerHTML = state.files.length === 0 
+        ? '' 
+        : state.files.map((f, i) => {
+            const url = URL.createObjectURL(f)
+            const ext = f.name.split('.').pop().toUpperCase()
+            const result = state.results[i]
+            let resultHtml = ''
+            if (result === 'processing') resultHtml = '<span class="result">Processing...</span>'
+            else if (result) resultHtml = `<span class="result">${formatSize(result.size)} (↓${((1-result.size/f.size)*100).toFixed(0)}%)</span>`
+            if (result && result.error) resultHtml = `<span class="result fail">${result.error}</span>`
+
+            return `<div class="file-item">
+              <img class="thumb" src="${url}" alt="">
+              <div class="info">
+                <div class="name" title="${f.name}">${f.name}</div>
+                <div class="meta">${formatSize(f.size)} · ${ext} · ${f.type}</div>
+                ${resultHtml}
+              </div>
+              <button class="remove" onclick="removeFile(${i})">✕</button>
+            </div>`
+          }).join('')
+
+      // Update stats
+      const allDone = state.files.length > 0 && state.results.every(r => r && !r.error)
+      if (allDone) {
+        const totalBefore = state.files.reduce((s,f) => s+f.size, 0)
+        const totalAfter = state.results.reduce((s,r) => s+(r?.size||0), 0)
+        document.getElementById('statTotal').textContent = state.files.length
+        document.getElementById('statBefore').textContent = formatSize(totalBefore)
+        document.getElementById('statAfter').textContent = formatSize(totalAfter)
+        document.getElementById('statSaved').textContent = Math.round((1-totalAfter/totalBefore)*100) + '%'
+        document.getElementById('btnDownload').classList.add('show')
+      } else {
+        document.getElementById('btnDownload').classList.remove('show')
+      }
+    }
+
+    async function processImage(file, index) {
+      state.results[index] = 'processing'
+      render()
+
+      try {
+        const img = await new Promise((resolve, reject) => {
+          const img = new Image()
+          img.onload = () => resolve(img)
+          img.onerror = reject
+          img.src = URL.createObjectURL(file)
+        })
+
+        const canvas = document.createElement('canvas')
+        let w = img.naturalWidth, h = img.naturalHeight
+        const maxW = parseInt(document.getElementById('maxWidth').value)
+        if (maxW > 0 && w > maxW) { h = Math.round(h * maxW / w); w = maxW }
+
+        canvas.width = w; canvas.height = h
+        const ctx = canvas.getContext('2d')
+        ctx.drawImage(img, 0, 0, w, h)
+
+        let format = document.getElementById('format').value
+        if (format === 'auto') format = file.type === 'image/png' ? 'image/png' : 'image/jpeg'
+        if (!['image/jpeg','image/png','image/webp'].includes(format)) format = 'image/jpeg'
+
+        const quality = parseInt(document.getElementById('quality').value) / 100
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, format, quality))
+
+        state.results[index] = {
+          blob, size: blob.size,
+          name: file.name.replace(/\.[^.]+$/, '') + '.' + format.split('/')[1],
+          format
+        }
+      } catch (e) {
+        state.results[index] = { error: e.message }
+      }
+      render()
+    }
+
+    async function processAll() {
+      const btn = document.getElementById('btnProcess')
+      btn.textContent = '⏳ Processing...'
+      btn.classList.add('processing')
+      btn.disabled = true
+
+      const promises = state.files.map((f, i) => 
+        state.results[i] && !state.results[i].error ? null : processImage(f, i)
+      ).filter(Boolean)
+
+      for (let i = 0; i < promises.length; i += 4) {
+        await Promise.all(promises.slice(i, i+4))
+      }
+
+      btn.textContent = '✅ Done!'
+      btn.classList.remove('processing')
+      btn.disabled = false
+      setTimeout(() => { btn.textContent = '🚀 Compress Again'; btn.disabled = false }, 3000)
+    }
+
+    async function downloadAll() {
+      for (const result of state.results) {
+        if (!result || result.error || !result.blob) continue
+        const a = document.createElement('a')
+        a.href = URL.createObjectURL(result.blob)
+        a.download = result.name
+        a.click()
+        await new Promise(r => setTimeout(r, 200))
+      }
+    }
+  </script>
+</body>
+</html>

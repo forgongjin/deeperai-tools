@@ -1,27 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Site -->
   <url>
     <loc>https://deeperai.cloud/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://deeperai.cloud/image-toolbox/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://deeperai.cloud/pdf-toolbox/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- English Pages -->
+  <url>
+    <loc>https://deeperai.cloud/en/</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://deeperai.cloud/blog/image-compressor-comparison.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <loc>https://deeperai.cloud/en/image-compress/</loc>
+    <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/pdf-tools/</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Essential Pages -->
+  <url>
+    <loc>https://deeperai.cloud/en/about.html</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/contact.html</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/privacy.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://deeperai.cloud/blog/image-compressor-comparison.html</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- English Blog Articles -->
+  <url>
+    <loc>https://deeperai.cloud/en/blog/best-free-image-compressor-2026.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/how-to-compress-images-for-web.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/merge-pdf-files-free-guide.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/why-image-compression-matters-seo.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/jpeg-vs-png-vs-webp-guide.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/compress-pdf-file-size-guide.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/split-pdf-online-free.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/add-watermark-pdf-guide.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/batch-image-compression-guide.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/en/blog/online-tools-privacy-comparison.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
 </urlset>
