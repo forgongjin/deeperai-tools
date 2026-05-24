@@ -3,187 +3,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Tools — Image Compressor & PDF Tools | No Upload Required</title>
-  <meta name="description" content="Free online tools: compress images, merge PDFs, split PDFs, and more. All processing happens locally in your browser — no file uploads, 100% private and secure.">
-  <meta name="keywords" content="free online tools,image compressor,compress images online,PDF tools,merge PDF,split PDF,free PDF tools,online image optimizer">
+  <title>DeeperAI Tools — Free Online Image Compression & PDF Tools</title>
+  <meta name="description" content="DeeperAI Tools — completely free online image compression and PDF processing tools. Browser-local processing means your files never leave your device. Supports JPG, PNG, WebP compression, PDF merge, split, and compress.">
+  <meta name="keywords" content="online image compression, free image compressor, compress PDF, merge PDF, split PDF, browser local processing, privacy safe tools">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://deeperai.cloud/en/">
-  <meta property="og:title" content="Free Online Tools — Image Compressor & PDF Tools">
-  <meta property="og:description" content="Free online image compressor and PDF tools. All processing done locally in your browser — private, secure, no upload required.">
+  <meta property="og:title" content="DeeperAI Tools — Free Image Compression & PDF Tools">
+  <meta property="og:description" content="Files stay on your device. Completely free. No uploads. No limits.">
   <meta property="og:url" content="https://deeperai.cloud/en/">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free Online Tools — Image Compressor & PDF Tools">
-  <meta name="twitter:description" content="Private, browser-based tools. No upload, no registration, free to use.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Deeper AI Tools",
-    "url": "https://deeperai.cloud/en/",
-    "description": "Free online tools for image compression and PDF processing. All tools work locally in your browser.",
-    "inLanguage": "en"
-  }
-  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K862TX7R');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2310449688342897" crossorigin="anonymous"></script>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box }
     :root {
-      --bg: #0f1117; --card: #1a1d27; --border: #2a2d3a;
-      --text: #e1e4ed; --sub: #8b8fa3; --accent: #6366f1;
-      --accent2: #f97316; --green: #22c55e;
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --border: #e7e5e4;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --green: #15803d;
+      --green-bg: #f0fdf4;
+      --radius: 8px;
     }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
-    .header { text-align:center; padding:60px 24px 40px; }
-    .header h1 { font-size:2.5rem; font-weight:700; margin-bottom:12px; }
-    .header h1 span { color:var(--accent) }
-    .header p { color:var(--sub); font-size:1.1rem; max-width:560px; margin:0 auto; }
-    .container { max-width:900px; margin:0 auto; padding:0 24px 48px; }
-
-    .tools { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:20px; margin-bottom:48px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    html { scroll-behavior: smooth }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      height: 56px;
+      gap: 32px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-brand span { color: var(--accent) }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      margin-left: auto;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .15s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+    }
+    .lang-bar {
+      background: #1c1917;
+      color: #fff;
+      text-align: center;
+      padding: 6px 12px;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .lang-bar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .lang-bar a:hover { background: rgba(255,255,255,0.1) }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px }
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), #ea580c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--green-bg);
+      color: var(--green);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-tag::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1 }
+      50% { opacity: 0.4 }
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      padding-bottom: 80px;
+    }
     .tool-card {
-      background:var(--card); border:1px solid var(--border); border-radius:16px;
-      padding:32px 24px; text-decoration:none; transition:all .2s;
-      display:flex; flex-direction:column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color .2s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
     }
-    .tool-card:hover { border-color:var(--accent); transform:translateY(-2px); }
-    .tool-card .icon { font-size:3rem; margin-bottom:16px; }
-    .tool-card h2 { color:var(--text); font-size:1.4rem; margin-bottom:8px; }
-    .tool-card h2 span { color:var(--accent); }
-    .tool-card:nth-child(2) h2 span { color:var(--accent2); }
-    .tool-card p { color:var(--sub); font-size:0.95rem; line-height:1.6; flex:1; }
-    .tool-card .features { display:flex; gap:8px; flex-wrap:wrap; margin-top:16px; }
-    .tool-card .tag {
-      background:rgba(99,102,241,0.1); color:var(--accent);
-      font-size:0.8rem; padding:4px 10px; border-radius:20px;
+    .tool-card:hover {
+      border-color: #d6d3d1;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
     }
-    .tool-card:nth-child(2) .tag { background:rgba(249,115,22,0.1); color:var(--accent2); }
-
-    .why-section { margin-top:24px; text-align:center; }
-    .why-section h2 { font-size:1.5rem; margin-bottom:24px; }
-    .why-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:16px; }
-    .why-item {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:12px; padding:24px 16px;
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
     }
-    .why-item .icon { font-size:2rem; margin-bottom:12px; }
-    .why-item h3 { font-size:1rem; margin-bottom:6px; }
-    .why-item p { color:var(--sub); font-size:0.85rem; line-height:1.5; }
-
-    .blog-section { margin-top:48px; }
-    .blog-section h2 { text-align:center; font-size:1.5rem; margin-bottom:24px; }
-    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:16px; }
-    .blog-card {
-      background:var(--card); border:1px solid var(--border);
-      border-radius:12px; padding:20px; text-decoration:none; transition:all .2s;
+    .tool-card.image::before { background: linear-gradient(90deg, #d97706, #ea580c) }
+    .tool-card.pdf::before { background: linear-gradient(90deg, #7c3aed, #6366f1) }
+    .tool-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
     }
-    .blog-card:hover { border-color:var(--accent); }
-    .blog-card h3 { color:var(--text); font-size:1rem; margin-bottom:8px; }
-    .blog-card p { color:var(--sub); font-size:0.85rem; line-height:1.5; }
-    .blog-card .date { color:var(--sub); font-size:0.75rem; margin-top:8px; }
-
-    .footer { text-align:center; color:var(--sub); font-size:0.8rem; margin-top:48px; padding-top:24px; border-top:1px solid var(--border); }
-    .footer a { color:var(--sub); margin:0 8px; }
+    .tool-card.image .tool-icon { background: #fff7ed; color: #d97706 }
+    .tool-card.pdf .tool-icon { background: #f5f3ff; color: #7c3aed }
+    .tool-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .tool-card p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+    .tool-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tool-features span {
+      font-size: 12px;
+      color: var(--muted);
+      background: #f5f5f4;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    .tool-card .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .tool-card.image .btn { background: #d97706; color: #fff }
+    .tool-card.image .btn:hover { background: #b45309 }
+    .tool-card.pdf .btn { background: #7c3aed; color: #fff }
+    .tool-card.pdf .btn:hover { background: #6d28d9 }
+    .trust-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+    }
+    .trust-section h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      text-align: center;
+    }
+    .trust-num {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .trust-label { font-size: 13px; color: var(--muted); }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .footer-nav a:hover { color: var(--text) }
+    .footer p { color: var(--muted); font-size: 13px; }
+    @media (max-width: 640px) {
+      .hero { padding: 48px 0 32px }
+      .nav-inner { gap: 16px }
+      .nav-links { gap: 12px }
+      .tools-grid { grid-template-columns: 1fr }
+    }
   </style>
 </head>
 <body>
-<div style="background:#1a1a2e;color:#fff;text-align:center;padding:6px 12px;font-size:13px;display:flex;justify-content:center;align-items:center;gap:4px;flex-wrap:wrap">
-  <span style="opacity:.7">🌐</span>
-  <a href="/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">中文</a>
-  <span style="opacity:.3">|</span>
-  <a href="/en/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px"style="background:rgba(255,255,255,.15)">English</a>
-  <span style="opacity:.3">|</span>
-  <a href="/de/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Deutsch</a>
-  <span style="opacity:.3">|</span>
-  <a href="/fr/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Français</a>
-</div>
-
-  <div class="header">
-    <h1>Deeper <span>AI Tools</span></h1>
-    <p>Free online tools that work entirely in your browser. No uploads, no signup, no fuss.</p>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="lang-bar">
+    <span style="opacity:.5;font-size:12px">Language</span>
+    <a href="/">中文</a>
+    <span style="opacity:.2">·</span>
+    <a href="/en/" style="background:rgba(255,255,255,.15)">English</a>
+    <span style="opacity:.2">·</span>
+    <a href="/de/">Deutsch</a>
+    <span style="opacity:.2">·</span>
+    <a href="/fr/">Français</a>
   </div>
-
-  <div class="container">
-    <div class="tools">
-      <a href="/en/image-compress/" class="tool-card">
-        <div class="icon">🖼️</div>
-        <h2>Image <span>Compressor</span></h2>
-        <p>Batch compress JPG, PNG, and WebP images. Adjust quality, convert formats, and resize — all locally in your browser.</p>
-        <div class="features">
-          <span class="tag">Batch Processing</span>
-          <span class="tag">JPG/PNG/WebP</span>
-          <span class="tag">Quality Control</span>
-          <span class="tag">Format Convert</span>
-        </div>
-      </a>
-
-      <a href="/en/pdf-tools/" class="tool-card">
-        <div class="icon">📄</div>
-        <h2>PDF <span>Tools</span></h2>
-        <p>Merge, split, extract pages, compress, and add watermarks to PDF files. Five tools in one — no registration needed.</p>
-        <div class="features">
-          <span class="tag">Merge PDF</span>
-          <span class="tag">Split PDF</span>
-          <span class="tag">Compress PDF</span>
-          <span class="tag">Watermark</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="why-section">
-      <h2>Why Choose Our Tools?</h2>
-      <div class="why-grid">
-        <div class="why-item">
-          <div class="icon">🔒</div>
-          <h3>100% Private</h3>
-          <p>All processing happens locally in your browser. Your files never leave your device.</p>
-        </div>
-        <div class="why-item">
-          <div class="icon">⚡</div>
-          <h3>Instant Processing</h3>
-          <p>No upload wait time. Process files instantly with client-side technology.</p>
-        </div>
-        <div class="why-item">
-          <div class="icon">📱</div>
-          <h3>Works Everywhere</h3>
-          <p>Desktop, tablet, or mobile — fully responsive design for any device.</p>
-        </div>
-        <div class="why-item">
-          <div class="icon">🆓</div>
-          <h3>Free to Use</h3>
-          <p>Core features are completely free with generous usage limits.</p>
-        </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/en/" class="nav-brand">Deeper<span>AI</span> Tools</a>
+      <div class="nav-links">
+        <a href="/en/" class="active">Home</a>
+        <a href="/en/image-compress/">Image Compress</a>
+        <a href="/en/pdf-tools/">PDF Tools</a>
+        <a href="/en/blog/">Blog</a>
       </div>
     </div>
-
-    <div class="blog-section">
-      <h2>📝 Latest Articles</h2>
-      <div class="blog-grid">
-        <a href="/en/blog/best-free-image-compressor-2026.html" class="blog-card">
-          <h3>Best Free Image Compressors in 2026 — Compared</h3>
-          <p>We tested the top free online image compression tools. Here's which one delivers the best quality and smallest file sizes.</p>
-          <div class="date">May 2026</div>
-        </a>
-        <a href="/en/blog/how-to-compress-images-for-web.html" class="blog-card">
-          <h3>How to Compress Images for Web Without Losing Quality</h3>
-          <p>A complete guide to reducing image file sizes for faster websites, better SEO, and improved user experience.</p>
-          <div class="date">May 2026</div>
-        </a>
-        <a href="/en/blog/merge-pdf-files-free-guide.html" class="blog-card">
-          <h3>How to Merge PDF Files Online for Free — Complete Guide</h3>
-          <p>Step-by-step guide to combining multiple PDFs into one document without installing any software.</p>
-          <div class="date">May 2026</div>
-        </a>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-tag">Files Stay on Your Device · Privacy First</div>
+        <h1>Free Online <em>Image Compression</em> & <em>PDF</em> Tools</h1>
+        <p>Everything runs in your browser. Your files never leave your device — better privacy, faster than server-based tools.</p>
       </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="tools-grid">
+          <div class="tool-card image">
+            <div class="tool-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <h2>Image Compressor</h2>
+            <p>Compress JPG, PNG, WebP images without quality loss. Batch drag-and-drop with live preview. All local.</p>
+            <div class="tool-features">
+              <span>JPG/PNG/WebP</span>
+              <span>Batch</span>
+              <span>Quality slider</span>
+              <span>Local</span>
+            </div>
+            <a href="/en/image-compress/" class="btn">Get Started &rarr;</a>
+          </div>
+          <div class="tool-card pdf">
+            <div class="tool-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h2>PDF Toolbox</h2>
+            <p>Merge, split, compress, extract PDF pages. Free, unlimited, no watermarks. Processed locally, never uploaded.</p>
+            <div class="tool-features">
+              <span>Merge & Split</span>
+              <span>Compress</span>
+              <span>Extract Pages</span>
+              <span>No Watermark</span>
+            </div>
+            <a href="/en/pdf-tools/" class="btn">Get Started &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trust-section">
+      <div class="container">
+        <h2>Why DeeperAI Tools</h2>
+        <div class="trust-grid">
+          <div class="trust-item"><div class="trust-num">0</div><div class="trust-label">Files uploaded to servers</div></div>
+          <div class="trust-item"><div class="trust-num">0</div><div class="trust-label">Sign-ups required</div></div>
+          <div class="trust-item"><div class="trust-num">0</div><div class="trust-label">Daily usage limits</div></div>
+          <div class="trust-item"><div class="trust-num">3</div><div class="trust-label">Tool types available</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/en/privacy.html">Privacy</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="/">中文</a>
+      </nav>
+      <p>&copy; 2026 DeeperAI Tools · All processing done locally in your browser</p>
     </div>
-
-    <div class="footer">
-      <a href="/en/about.html">About</a> ·
-      <a href="/en/contact.html">Contact</a> ·
-      <a href="/en/privacy.html">Privacy Policy</a>
-      <br>© 2026 Deeper AI Tools. All rights reserved. · All tools process files locally in your browser
-    </div>
-  </div>
-  <script src="/en/admin/tracker.js" defer></script>
+  </footer>
 </body>
 </html>
