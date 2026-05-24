@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
   <link rel="stylesheet" href="../../assets/css/style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compression d'images — DeeperAI Tools</title>
-<meta name="robots" content="noindex, follow">
-<meta name="description" content="Compression d'images — DeeperAI Tools — Coming soon">
-<style>
-  :root {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compression d'Images — Compressez JPG, PNG, WebP Gratuitement | DeeperAI Tools</title>
+  <meta name="description" content="Compressez vos images JPG, PNG, WebP directement dans le navigateur. Traitement par lot, curseur de qualité, aperçu en direct — 100% local, sans téléchargement vers un serveur. Gratuit et privé.">
+  <meta name="keywords" content="compression d'images, compresser jpg, compresser png, compresser webp, réducteur taille image, compresseur photo en ligne, batch compression, outil compression gratuit">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://deeperai.cloud/fr/image-compress/">
+  <meta property="og:title" content="Compression d'Images — Compressez JPG, PNG, WebP Gratuitement | DeeperAI Tools">
+  <meta property="og:description" content="Compressez vos images directement dans le navigateur. Traitement par lot, curseur de qualité, aperçu en direct. 100% local et privé.">
+  <meta property="og:url" content="https://deeperai.cloud/fr/image-compress/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compression d'Images — Compressez JPG, PNG, WebP Gratuitement">
+  <meta name="twitter:description" content="Compressez vos images directement dans le navigateur. Traitement par lot, curseur de qualité, aperçu en direct.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Compression d'Images — DeeperAI Tools",
+    "description": "Compression d'images gratuite directement dans le navigateur. Supporte JPG, PNG, WebP avec traitement par lot et aperçu en direct.",
+    "url": "https://deeperai.cloud/fr/image-compress",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "inLanguage": "fr",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+  <style>
+    :root {
   --color-bg: #fafaf9;
   --color-surface: #ffffff;
   --color-border: #e7e5e4;
@@ -30,38 +57,40 @@
   --color-pdf-bg: #f5f3ff;
   --color-dark: #0c0a09;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --nav-height: 60px; --bg: #f8f9fa; --card: #fff; --text: #2d3436; --muted: #636e72; --accent: #f97316; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column }.container { max-width:600px;margin:80px auto;padding:20px;text-align:center;flex:1 }
-  h1 { font-size:24px;margin-bottom:12px }
-  p { color:var(--muted);margin-bottom:20px;line-height:1.8 }
-  .card { background:var(--card);border:1px solid #dfe6e9;border-radius:12px;padding:24px;margin-top:20px }
-  .card a { display:inline-block;background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:6px }
-  footer { text-align:center;color:var(--muted);font-size:13px;padding:24px;border-top:1px solid #dfe6e9 }
-</style>
-
-  <link rel="canonical" href="https://deeperai.cloud/fr/image-compress/">
-  <meta property="og:title" content="Compression d'images — DeeperAI Tools">
-  <meta property="og:description" content="Compression d'images — DeeperAI Tools — Coming soon">
-  <meta property="og:url" content="https://deeperai.cloud/fr/image-compress/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-K862TX7R');</script>
-  <!-- End Google Tag Manager -->
-
+  --nav-height: 60px;--bg:#f8f9fa;--card:#fff;--text:#2d3436;--muted:#636e72;--accent:#f97316;--border:#dfe6e9}
+    body{font-family:var(--font-sans);background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    main{flex:1}
+    .hero{padding:60px 20px 36px;text-align:center}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;margin-bottom:14px;line-height:1.25}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:var(--muted);font-size:17px;max-width:600px;margin:0 auto 28px;line-height:1.65}
+    .hero .btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 32px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;transition:background .2s}
+    .hero .btn:hover{background:#ea580c}
+    .features{max-width:860px;margin:0 auto;padding:0 20px 48px}
+    .features h2{font-size:22px;margin-bottom:20px}
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+    .feature-card .icon{font-size:28px;margin-bottom:10px}
+    .feature-card h3{font-size:17px;margin-bottom:8px}
+    .feature-card p{color:var(--muted);font-size:15px;line-height:1.6}
+    .en-cta{max-width:860px;margin:0 auto 32px;padding:0 20px}
+    .en-cta .card{background:#fff7ed;border:2px solid #f97316;border-radius:14px;padding:28px 24px;text-align:center}
+    .en-cta .card h3{font-size:19px;margin-bottom:8px}
+    .en-cta .card p{color:var(--muted);font-size:15px;margin-bottom:16px;line-height:1.6}
+    .en-cta .card a{display:inline-block;background:#f97316;color:#fff;padding:12px 32px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none}
+    .en-cta .card a:hover{background:#ea580c}
+    .en-cta .card .privacy{font-size:13px;color:var(--muted);margin-top:8px}
+    .formats{max-width:860px;margin:0 auto;padding:0 20px 48px}
+    .formats h2{font-size:20px;margin-bottom:14px}
+    .format-list{display:flex;flex-wrap:wrap;gap:8px}
+    .format-tag{background:#fff7ed;border:1px solid #fed7aa;color:#c2410c;padding:6px 14px;border-radius:20px;font-size:14px;font-weight:500}
+  </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2310449688342897" crossorigin="anonymous"></script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K862TX7R");</script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
   <div class="lang-bar">
       <a href="/">中文</a>
       <span class="sep">·</span>
@@ -87,25 +116,83 @@
     </div>
   </nav>
 
-<div class="container">
-<h1>🚧 Compression d'images — DeeperAI Tools</h1>
-<p>Cette page est en cours de développement.</p>
-<p>Passez à <b>l'anglais</b> ou au <b>chinois</b> pour utiliser les outils disponibles.</p>
-<div class="card">
-  <a href="/en/image-compress/">English →</a>
-  <a href="/image-toolbox/">中文 →</a>
-</div>
-</div>
+  <main>
+    <section class="hero">
+      <h1><span>Compression d'images</span><br>directement dans le navigateur</h1>
+      <p>JPG, PNG, WebP et plus — traitement par lot, curseur de qualité individuel, aperçu en direct. Vos fichiers ne quittent jamais votre appareil.</p>
+      <a href="/en/image-compress/" class="btn">Utiliser l'outil en anglais →</a>
+    </section>
+
+    <section class="features">
+      <h2>Fonctionnalités</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">📁</div>
+          <h3>Traitement par lot</h3>
+          <p>Glissez-déposez plusieurs images simultanément. Chaque image est traitée individuellement avec son propre téléchargement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎚️</div>
+          <h3>Curseur de qualité</h3>
+          <p>Ajustez la compression pour chaque image avec un curseur. Aperçu en direct de la taille du fichier avant téléchargement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔒</div>
+          <h3>100% confidentiel</h3>
+          <p>Aucun téléchargement vers un serveur. Tout le traitement s'effectue localement dans votre navigateur — vos fichiers restent chez vous.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📐</div>
+          <h3>Redimensionnement</h3>
+          <p>Réduisez les dimensions avant compression — idéal pour l'optimisation web. Largeur/hauteur réglables en pixels.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔄</div>
+          <h3>Conversion de format</h3>
+          <p>Convertissez entre JPG, PNG et WebP pendant la compression. Possibilité de conserver le format d'origine.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Prêt à l'emploi</h3>
+          <p>Aucune installation, aucune inscription. Ouvrez, glissez vos images, compressez — terminé en quelques secondes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="en-cta">
+      <div class="card">
+        <h3>🇬🇧 Cet outil est disponible en anglais</h3>
+        <p>La compression d'images fonctionne entièrement dans votre navigateur. Tout le traitement est local — aucun téléchargement, 100% privé.</p>
+        <a href="/en/image-compress/">Utiliser en anglais →</a>
+        <p class="privacy">🔒 Vos fichiers restent sur votre appareil. Aucun téléchargement serveur.</p>
+      </div>
+    </section>
+
+    <section class="formats">
+      <h2>Formats supportés</h2>
+      <div class="format-list">
+        <span class="format-tag">JPG / JPEG</span>
+        <span class="format-tag">PNG</span>
+        <span class="format-tag">WebP</span>
+        <span class="format-tag">AVIF</span>
+        <span class="format-tag">BMP</span>
+        <span class="format-tag">TIFF</span>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-top:16px;line-height:1.7">La sortie est en JPG, PNG ou WebP. Pour WebP, nous recommandons un niveau de qualité de 75–85% — le meilleur équilibre entre taille de fichier et qualité d'image.</p>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <div class="container">
       <nav class="footer-nav">
-        <a href="/fr/privacy.html">Confidentialit&eacute;</a>
-        <a href="/fr/about.html">&Agrave; propos</a>
+        <a href="/fr/privacy.html">Confidentialité</a>
+        <a href="/fr/about.html">À propos</a>
         <a href="/fr/contact.html">Contact</a>
         <a href="/fr/blog/">Blog</a>
         <a href="/en/">English</a>
       </nav>
-      <p class="copy">&copy; 2026 DeeperAI Tools &mdash; Tout le traitement se fait localement dans votre navigateur</p>
+      <p class="copy">&copy; 2026 DeeperAI Tools &mdash; Tout le traitement s'effectue localement dans votre navigateur</p>
     </div>
   </footer>
-</body></html>
+</body>
+</html>

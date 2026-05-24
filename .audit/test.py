@@ -60,6 +60,18 @@ def check_page(filepath):
             if v1 != v2:
                 P2(rel, f"Accent mismatch (non-tool page): --color-accent={v1} vs --accent={v2}")
     
+    # ── PRICING / PAYWALL TEXT ──
+    pricing_patterns = [
+        r'¥\d+\s*(永久买断|永久解锁|每月|/月)',  # ¥6 永久买断
+        r'(Pro|pro)\s*(版|版本)\s*(到手|仅需|只需)',  # Pro 版到手
+        r'升级\s*(Pro|pro|会员|付费)',  # 升级Pro
+        r'免费版\s*(限制|一次最多)',  # 免费版限制
+        r'(解锁|升级|购买)\s*(Pro|pro|会员)',  # 解锁Pro
+    ]
+    for pattern in pricing_patterns:
+        if re.search(pattern, html):
+            P0(rel, f"Contains pricing/upgrade text matching: {pattern}")
+
     # ── LANG BAR ──
     lang_bars = len(re.findall(r'class="lang-bar"', html))
     if lang_bars == 0:
