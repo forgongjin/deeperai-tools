@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDF轻处理 - 免费在线PDF合并拆分压缩工具 | 本地处理 不上传</title>
   <meta name="description" content="免费在线PDF处理工具：合并PDF、拆分PDF、提取页面、压缩PDF、添加水印。所有处理在浏览器本地完成，文件不上传服务器，保护隐私安全。">
-    <meta name="keywords" content="PDF合并,PDF拆分,PDF压缩,PDF提取页面,PDF加水印,在线PDF处理,免费PDF工具,PDF编辑">
+  <!-- PAYWALL_HIDE: <script src="https://assets.lemonsqueezy.com/lemonsqueezy.js" defer></script> -->
+  <meta name="keywords" content="PDF合并,PDF拆分,PDF压缩,PDF提取页面,PDF加水印,在线PDF处理,免费PDF工具,PDF编辑">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://deeperai.cloud/pdf-toolbox/">
   <meta property="og:title" content="PDF轻处理 - 免费在线PDF合并拆分压缩工具">
@@ -159,6 +160,24 @@
       background:var(--bg); color:var(--text); border:1px solid var(--border);
       border-radius:6px; padding:8px 10px; font-size:0.9rem;
     }
+
+    /* PAYWALL_HIDE
+    /* Pro banner */
+    .pro-banner {
+      text-align:center; padding:24px; background:linear-gradient(135deg, rgba(249,115,22,0.15), rgba(234,88,12,0.12));
+      border-radius:16px; border:1px solid rgba(249,115,22,0.2); margin-top:24px;
+    }
+    .pro-banner h3 { margin-bottom:8px }
+    .pro-banner p { color:var(--sub); margin-bottom:12px; font-size:0.9rem }
+    .pro-banner .btn-pro {
+      display:inline-block; background:linear-gradient(135deg, var(--accent), #ea580c);
+      color:#fff; padding:10px 24px; border-radius:8px; font-weight:600;
+      text-decoration:none; font-size:0.9rem;
+    }
+    PAYWALL_HIDE */
+
+    .footer { text-align:center; color:var(--sub); font-size:0.8rem; margin-top:24px; }
+    .hidden { display:none !important }
     .free-badge {
       display:inline-block; background:rgba(34,197,94,0.15); color:var(--green);
       font-size:0.75rem; padding:3px 10px; border-radius:20px; font-weight:600;
@@ -167,12 +186,9 @@
 
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div style="background:#1a1a2e;color:#fff;text-align:center;padding:6px 12px;font-size:13px;display:flex;justify-content:center;align-items:center;gap:4px;flex-wrap:wrap">
   <span style="opacity:.7">🌐</span>
-  <a href="/pdf-toolbox/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px"style="background:rgba(255,255,255,.15)">中文</a>
+  <a href="/pdf-toolbox/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.15)">中文</a>
   <span style="opacity:.3">|</span>
   <a href="/en/pdf-tools/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">English</a>
   <span style="opacity:.3">|</span>
@@ -181,6 +197,9 @@
   <a href="/fr/pdf-tools/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Français</a>
 </div>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="header">
     <h1>📄 PDF<span>轻处理</span></h1>
@@ -202,7 +221,7 @@
       <div class="upload-zone" id="mergeZone">
         <div class="icon">📁</div>
         <div class="btn" onclick="document.getElementById('mergeInput').click()">选择PDF文件</div>
-        <div class="tip">拖拽多个PDF到此处合并 · <span class="free-badge">完全免费，无限制使用</span></div>
+        <div class="tip">拖拽多个PDF到此处合并 · <span class="free-badge">免费版 ≤3文件</span></div>
         <input type="file" id="mergeInput" multiple accept=".pdf" class="hidden">
       </div>
       <div class="file-list" id="mergeList"></div>
@@ -252,7 +271,7 @@
       <div class="upload-zone" id="compressZone">
         <div class="icon">📄</div>
         <div class="btn" onclick="document.getElementById('compressInput').click()">选择PDF文件</div>
-        <div class="tip">通过压缩内嵌图片来减小PDF体积 <span class="free-badge">完全免费，无限制使用</span></div>
+        <div class="tip">通过压缩内嵌图片来减小PDF体积 <span class="free-badge">完全免费，无限制</span></div>
         <input type="file" id="compressInput" accept=".pdf" class="hidden">
       </div>
       <div class="file-list" id="compressList"></div>
@@ -308,14 +327,25 @@
         <button class="btn-action" id="wmBtn" onclick="addWatermark()">💧 添加水印</button>
         <button class="btn-download" id="wmDownload" onclick="downloadResult('watermark')">⬇ 下载结果</button>
       </div>
-    </div><div class="footer">
+    </div>
+
+    <!-- PAYWALL_HIDE
+    <!-- Pro Banner -->
+    <div class="pro-banner">
+      <h3>🚀 PDF轻处理 Pro</h3>
+      <p>无限制使用 · 无水印 · 批量处理 · API接入 · 图片转PDF · ¥9 永久买断</p>
+      <button class="btn-pro" onclick="handleBuy()" style="border:none;cursor:pointer">升级 Pro →</button>
+    </div>
+    PAYWALL_HIDE -->
+
+    <div class="footer">
       <p style="margin-bottom:8px">
         <a href="/privacy.html" style="color:#636e72;text-decoration:none;margin:0 8px">隐私政策</a>
         <a href="/about.html" style="color:#636e72;text-decoration:none;margin:0 8px">关于</a>
         <a href="/contact.html" style="color:#636e72;text-decoration:none;margin:0 8px">联系</a>
         <a href="/blog/" style="color:#636e72;text-decoration:none;margin:0 8px">Blog</a>
       </p>
-      PDF轻处理 · 完全免费 · 所有处理仅限浏览器本地，无限制使用
+      PDF轻处理 · 你的文件你的隐私 · 所有处理仅限浏览器本地
     </div>
   </div>
 
@@ -328,6 +358,8 @@
       watermark: { file: null, result: null }
     }
     let currentTool = 'merge'
+    const MAX_FREE_FILES = 999
+    const MAX_FREE_SIZE = 999 * 1024 * 1024 // FREENOW: unlimited
 
     function switchTool(tool) {
       currentTool = tool
@@ -528,6 +560,10 @@
     async function compressPDF() {
       const file = state.compress.file
       if (!file) return
+      if (file.size > MAX_FREE_SIZE && !localStorage.getItem('pdfpro')) {
+        alert('免费版限制10MB以内文件，请升级Pro解锁')
+        return
+      }
       const btn = document.getElementById('compressBtn')
       btn.disabled = true; btn.textContent = '⏳ 压缩中...'
 
@@ -612,6 +648,12 @@
     setupDropZone('compressZone', 'compressInput', 'compress')
     setupDropZone('wmZone', 'wmInput', 'watermark')
     renderMergeList()
+
+    /* PAYWALL_HIDE
+    function handleBuy() {
+      LemonSqueezy.Url.Open('https://wangcaioc.lemonsqueezy.com/checkout/buy/8a14d795-4c43-4e16-92a4-c27f47cfe439')
+    }
+    PAYWALL_HIDE */
   </script>
 </body>
 </html>

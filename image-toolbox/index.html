@@ -13,7 +13,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>图压 - 免费在线图片批量压缩 & 格式转换 | 本地处理 不上传</title>
   <meta name="description" content="免费在线图片批量压缩工具，支持 JPG/PNG/WebP 格式互转，所有处理在浏览器本地完成，文件不上传服务器。拖拽即可批量压缩，手机电脑都能用。">
-    <meta name="keywords" content="图片压缩,在线图片压缩,批量图片压缩,图片格式转换,JPG转PNG,PNG转WebP,免费压缩工具,图片瘦身">
+  <!-- PAYWALL_HIDE: <script src="https://assets.lemonsqueezy.com/lemonsqueezy.js" defer></script> -->
+  <meta name="keywords" content="图片压缩,在线图片压缩,批量图片压缩,图片格式转换,JPG转PNG,PNG转WebP,免费压缩工具,图片瘦身">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://deeperai.cloud/image-toolbox/">
   <meta property="og:title" content="图压 - 免费在线图片批量压缩工具">
@@ -153,10 +154,63 @@
     .stat .value { font-size:1.5rem; font-weight:700; color:var(--accent) }
     .stat .label { font-size:0.8rem; color:var(--sub); margin-top:4px }
 
+    /* PAYWALL_HIDE
+/* Pro upsell */
+    .pro-banner {
+      text-align:center; padding:24px; background:linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.15));
+      border-radius:16px; border:1px solid rgba(99,102,241,0.2); margin-top:24px;
+    }
+    .pro-banner h3 { margin-bottom:8px }
+    .pro-banner p { color:var(--sub); margin-bottom:12px; font-size:0.9rem }
+    .pro-banner .btn-pro {
+      display:inline-block; background:linear-gradient(135deg, var(--accent), #8b5cf6);
+      color:#fff; padding:10px 24px; border-radius:8px; font-weight:600;
+      text-decoration:none; font-size:0.9rem;
+    }
+
+    /* Paywall */
+    .paywall-overlay {
+      position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:100;
+      display:flex; align-items:center; justify-content:center;
+      backdrop-filter:blur(4px);
+    }
+    .paywall-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:20px; padding:40px 32px; text-align:center;
+      max-width:420px; width:90%;
+    }
+    .paywall-card h2 { font-size:1.5rem; margin-bottom:12px }
+    .paywall-card h2 span { color:#f59e0b }
+    .paywall-card .limit-info {
+      color:var(--sub); font-size:0.9rem; margin-bottom:24px; line-height:1.6;
+    }
+    .paywall-card .features {
+      text-align:left; margin-bottom:24px; background:var(--bg);
+      padding:16px; border-radius:12px;
+    }
+    .paywall-card .features li {
+      list-style:none; padding:6px 0; font-size:0.9rem; color:var(--sub);
+    }
+    .paywall-card .features li::before { content:'✅ ' }
+    .paywall-card .features li.pro::before { content:'🚀 '; color:var(--accent) }
+    .paywall-card .btn-buy {
+      display:block; width:100%; background:linear-gradient(135deg, #f59e0b, #f97316);
+      color:#000; border:none; padding:14px; border-radius:10px;
+      font-size:1.05rem; font-weight:700; cursor:pointer;
+      margin-bottom:8px; transition:transform .2s;
+    }
+    .paywall-card .btn-buy:hover { transform:scale(1.02) }
+    .paywall-card .btn-skip {
+      background:none; border:none; color:var(--sub); cursor:pointer;
+      font-size:0.85rem; padding:8px;
+    }
+    .paywall-card .btn-skip:hover { color:var(--text) }
+PAYWALL_HIDE */
     .free-badge {
       display:inline-block; background:rgba(34,197,94,0.15); color:var(--green);
       font-size:0.75rem; padding:3px 10px; border-radius:20px; font-weight:600;
     }
+
     .footer { text-align:center; color:var(--sub); font-size:0.8rem; margin-top:24px; }
     .footer a { color:var(--sub) }
     .hidden { display:none !important }
@@ -164,12 +218,9 @@
 
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div style="background:#1a1a2e;color:#fff;text-align:center;padding:6px 12px;font-size:13px;display:flex;justify-content:center;align-items:center;gap:4px;flex-wrap:wrap">
   <span style="opacity:.7">🌐</span>
-  <a href="/image-toolbox/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px"style="background:rgba(255,255,255,.15)">中文</a>
+  <a href="/image-toolbox/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.15)">中文</a>
   <span style="opacity:.3">|</span>
   <a href="/en/image-compress/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">English</a>
   <span style="opacity:.3">|</span>
@@ -178,6 +229,9 @@
   <a href="/fr/image-compress/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Français</a>
 </div>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="header">
     <h1>图<span>压</span></h1>
@@ -241,30 +295,100 @@
     <div class="actions">
       <button class="btn-process" id="btnProcess" onclick="processAll()">🚀 开始压缩</button>
       <button class="btn-download" id="btnDownload" onclick="downloadAll()">⬇ 下载全部</button>
-    </div><div class="footer">
+    </div>
+
+    <!-- Pro Banner -->
+    <div class="pro-banner">
+      <h3>🚀 图压 Pro</h3>
+      <p>无限批量处理 · API接入 · 自动抠图 · 水印添加 · ¥6 永久买断</p>
+      <button class="btn-pro" onclick="handleBuy()" style="border:none;cursor:pointer">升级 Pro →</button>
+    </div>
+
+    <div class="footer">
       <p style="margin-bottom:8px">
         <a href="/privacy.html" style="color:#636e72;text-decoration:none;margin:0 8px">隐私政策</a>
         <a href="/about.html" style="color:#636e72;text-decoration:none;margin:0 8px">关于</a>
         <a href="/contact.html" style="color:#636e72;text-decoration:none;margin:0 8px">联系</a>
         <a href="/blog/" style="color:#636e72;text-decoration:none;margin:0 8px">Blog</a>
       </p>
-      图压 · 完全免费 · 所有图片仅在浏览器本地处理，无限制使用
+      图压 · 你的隐私我们尊重 · 所有图片仅在浏览器本地处理
     </div>
   </div>
 
   <script>
     const MAX_FREE = 999
-    const state = { files: [], results: [] }
+    const state = { files: [], results: [], isPro: false }
+
+    // Check if user has Pro from localStorage
+    try {
+      const saved = localStorage.getItem('tupress_pro')
+      if (saved) {
+        const data = JSON.parse(saved)
+        if (data.expiresAt && Date.now() < data.expiresAt) state.isPro = true
+      }
+    } catch(e) {}
 
     function addFiles(fileList) {
       const newFiles = Array.from(fileList).filter(f => f.type.startsWith('image/'))
       const totalAfter = state.files.length + newFiles.length
-      {
+
+      if (!state.isPro && totalAfter > MAX_FREE) {
+        const remaining = MAX_FREE - state.files.length
+        if (remaining > 0) {
+          for (let i = 0; i < remaining; i++) {
+            state.files.push(newFiles[i])
+            state.results.push(null)
+          }
+        }
+        showPaywall(totalAfter)
+      } else {
         for (const file of newFiles) {
           state.files.push(file)
           state.results.push(null)
         }
       }
+      render()
+    }
+
+    function showPaywall(wanted) {
+      const overlay = document.createElement('div')
+      overlay.className = 'paywall-overlay'
+      overlay.id = 'paywall'
+      overlay.innerHTML = `
+        <div class="paywall-card">
+          <h2>升级 <span>图压 Pro</span></h2>
+          <div class="limit-info">
+            免费版每次最多处理 <b>${MAX_FREE} 张</b> 图片<br>
+            你想添加 <b>${wanted} 张</b>，超出限制了
+          </div>
+          <div class="features">
+            <li>无限批量处理</li>
+            <li>自动抠图</li>
+            <li>水印批量添加</li>
+            <li class="pro">API 接口调用</li>
+            <li class="pro">优先支持</li>
+          </div>
+          <button class="btn-buy" onclick="handleBuy()">💰 ¥6 永久买断 · 立即升级</button>
+          <button class="btn-skip" onclick="document.getElementById('paywall').remove()">暂不升级，先用免费版</button>
+        </div>
+      `
+      document.body.appendChild(overlay)
+    }
+
+    /* PAYWALL_HIDE
+    function handleBuy() {
+      const checkoutUrl = 'https://wangcaioc.lemonsqueezy.com/checkout/buy/d5002c32-5e24-413d-a261-6415e40aca90'
+      LemonSqueezy.Url.Open(checkoutUrl)
+    }
+    PAYWALL_HIDE */
+
+    function activatePro() {
+      state.isPro = true
+      localStorage.setItem('tupress_pro', JSON.stringify({
+        expiresAt: Date.now() + 30*24*60*60*1000 // 30 days
+      }))
+      const pw = document.getElementById('paywall')
+      if (pw) pw.remove()
       render()
     }
 
