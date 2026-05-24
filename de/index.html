@@ -1,44 +1,140 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DeeperAI Tools — Bildkomprimierung & PDF-Werkzeuge — DeeperAI Tools</title>
-<meta name="robots" content="noindex, follow">
-<meta name="description" content="DeeperAI Tools — Bildkomprimierung & PDF-Werkzeuge — Coming soon">
-<style>
-  :root { --bg: #f8f9fa; --card: #fff; --text: #2d3436; --muted: #636e72; --accent: #0984e3 }
-  * { margin:0; padding:0; box-sizing:border-box }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--text); min-height:100vh; display:flex; flex-direction:column }
-  .lang-bar { background:#1a1a2e;color:#fff;text-align:center;padding:6px 12px;font-size:13px;display:flex;justify-content:center;align-items:center;gap:4px;flex-wrap:wrap }
-  .lang-bar a { color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px }
-  .container { max-width:600px;margin:80px auto;padding:20px;text-align:center;flex:1 }
-  h1 { font-size:24px;margin-bottom:12px }
-  p { color:var(--muted);margin-bottom:20px;line-height:1.8 }
-  .card { background:var(--card);border:1px solid #dfe6e9;border-radius:12px;padding:24px;margin-top:20px }
-  .card a { display:inline-block;background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin:6px }
-  footer { text-align:center;color:var(--muted);font-size:13px;padding:24px;border-top:1px solid #dfe6e9 }
-</style>
+  <style>:root {
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-border: #e7e5e4;
+  --color-border-light: #f5f5f4;
+  --color-text: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #a8a29e;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-light: #eef2ff;
+  --color-accent-subtle: #f5f3ff;
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-image-accent: #f97316;
+  --color-image-bg: #fff7ed;
+  --color-pdf-accent: #7c3aed;
+  --color-pdf-bg: #f5f3ff;
+  --color-dark: #0c0a09;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --nav-height: 60px;
+  }</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeeperAI Tools — Kostenlose Online-Bildkomprimierung &amp; PDF-Tools</title>
+  <meta name="description" content="DeeperAI Tools — kostenlose Bildkomprimierung und PDF-Bearbeitung. Alles läuft lokal in Ihrem Browser — Ihre Dateien verlassen nie Ihr Gerät.">
+  <meta name="keywords" content="Bildkomprimierung, PDF komprimieren, PDF zusammenfügen, PDF teilen, online tools, datenschutz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://deeperai.cloud/de/">
+  <meta property="og:title" content="DeeperAI Tools — Kostenlose Bildkomprimierung &amp; PDF-Tools">
+  <meta property="og:description" content="Dateien bleiben auf Ihrem Gerät. Komplett kostenlos. Keine Uploads. Keine Limits.">
+  <meta property="og:url" content="https://deeperai.cloud/de/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K862TX7R');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2310449688342897" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="lang-bar">
-  <span style="opacity:.7">🌐</span>
-  <a href="/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">中文</a>
-  <span style="opacity:.3">|</span>
-  <a href="/en/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">English</a>
-  <span style="opacity:.3">|</span>
-  <a href="/de/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.15)">Deutsch</a>
-  <span style="opacity:.3">|</span>
-  <a href="/fr/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Français</a>
-</div>
-<div class="container">
-<h1>🚧 DeeperAI Tools — Bildkomprimierung & PDF-Werkzeuge</h1>
-<p>Diese Seite ist noch in Arbeit.</p>
-<p>Wechseln Sie zu <b>Englisch</b> oder <b>Chinesisch</b>, um die verfügbaren Tools zu nutzen.</p>
-<div class="card">
-  <a href="/en/">English →</a>
-  <a href="/">中文 →</a>
-</div>
-</div>
-<footer>© 2026 DeeperAI Tools</footer>
-</body></html>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="lang-bar">
+    <a href="/">中文</a>
+    <span class="sep">·</span>
+    <a href="/en/">English</a>
+    <span class="sep">·</span>
+    <a href="/de/" class="current">Deutsch</a>
+    <span class="sep">·</span>
+    <a href="/fr/">Français</a>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/de/" class="nav-brand">Deeper<span class="accent">Tools</span></a>
+      <button class="nav-toggle" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="/de/" class="active">Startseite</a>
+        <a href="/de/image-compress/">Bild Komprimieren</a>
+        <a href="/de/pdf-tools/">PDF Tools</a>
+        <a href="/de/blog/">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge"><span class="dot"></span>Dateien bleiben auf Ihrem Gerät · Datenschutz zuerst</div>
+        <h1>Kostenlose <span class="gradient">Bildkomprimierung</span> &amp; PDF-Tools</h1>
+        <p>Alles läuft in Ihrem Browser. Ihre Dateien verlassen nie Ihr Gerät — besserer Datenschutz, schneller als Cloud-Tools.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="/de/image-compress/" class="btn btn-primary" style="background:var(--color-image-accent);font-size:15px">Bilder komprimieren &rarr;</a>
+          <a href="/de/pdf-tools/" class="btn btn-outline">PDF Tools &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="container">
+        <div class="tools-grid">
+          <div class="tool-card image">
+            <div class="icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            </div>
+            <h3>Bild Komprimieren</h3>
+            <p class="desc">Komprimieren Sie JPG, PNG, WebP mit perfekter Qualitäts-Größen-Balance. Batch-Drag &amp; Drop, Live-Vorschau.</p>
+            <div class="tool-tags">
+              <span>JPG / PNG / WebP</span><span>Batch</span><span>Qualitätsregler</span><span>Lokal</span>
+            </div>
+            <a href="/de/image-compress/" class="cta">Jetzt starten &rarr;</a>
+          </div>
+
+          <div class="tool-card pdf">
+            <div class="icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>PDF Tools</h3>
+            <p class="desc">PDFs zusammenfügen, teilen, komprimieren. Kostenlos, unbegrenzt, kein Wasserzeichen. Lokal verarbeitet.</p>
+            <div class="tool-tags">
+              <span>Zusammenfügen &amp; Teilen</span><span>Komprimieren</span><span>Seiten extrahieren</span><span>Kein Wasserzeichen</span>
+            </div>
+            <a href="/de/pdf-tools/" class="cta">Jetzt starten &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-section">
+      <div class="container">
+        <h2>Warum DeeperAI Tools</h2>
+        <div class="trust-grid">
+          <div class="trust-item"><div class="num">0</div><div class="label">Dateien auf Server hochgeladen</div></div>
+          <div class="trust-item"><div class="num">0</div><div class="label">Anmeldung erforderlich</div></div>
+          <div class="trust-item"><div class="num">0</div><div class="label">Tägliche Limits</div></div>
+          <div class="trust-item"><div class="num">100%</div><div class="label">Browser-lokale Verarbeitung</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/de/privacy.html">Datenschutz</a>
+        <a href="/de/about.html">Über uns</a>
+        <a href="/de/contact.html">Kontakt</a>
+        <a href="/de/blog/">Blog</a>
+        <a href="/en/">English</a>
+      </nav>
+      <p class="copy">&copy; 2026 DeeperAI Tools &mdash; Alle Verarbeitung erfolgt lokal in Ihrem Browser</p>
+    </div>
+  </footer>
+</body>
+</html>

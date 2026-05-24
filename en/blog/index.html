@@ -1,68 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>:root {
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-border: #e7e5e4;
+  --color-border-light: #f5f5f4;
+  --color-text: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #a8a29e;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-light: #eef2ff;
+  --color-accent-subtle: #f5f3ff;
+  --color-success: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-image-accent: #f97316;
+  --color-image-bg: #fff7ed;
+  --color-pdf-accent: #7c3aed;
+  --color-pdf-bg: #f5f3ff;
+  --color-dark: #0c0a09;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --nav-height: 60px;
+  }</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Image Compression & PDF Tools | DeeperAI Tools</title>
-  <meta name="description" content="DeeperAI Tools Blog — image compression tutorials, PDF guides, format comparisons, and tool recommendations. Updated regularly.">
-  <meta name="keywords" content="image compression blog,PDF tools blog,image format comparison,online tools guide">
+  <title>Blog — DeeperAI Tools · Image & PDF Guides</title>
+  <meta name="description" content="DeeperAI Tools Blog — image compression guides, PDF processing tutorials, and online tool tips. Learn to work smarter with your files.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://deeperai.cloud/en/blog/">
-  <meta property="og:title" content="Blog — DeeperAI Tools">
-  <meta property="og:description" content="Image compression and PDF tools tutorials.">
-  <meta property="og:url" content="https://deeperai.cloud/en/blog/">
-  <meta property="og:type" content="website">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2310449688342897" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K862TX7R');</script>
-  <style>:root{--bg:#f8f9fa;--card:#fff;--text:#2d3436;--muted:#636e72;--accent:#0984e3;--border:#dfe6e9}*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}.container{max-width:760px;margin:0 auto;padding:20px}header{background:var(--card);box-shadow:0 2px 8px rgba(0,0,0,.06);padding:16px 0;margin-bottom:32px}header .container{display:flex;align-items:center;gap:12px;flex-wrap:wrap}header a{color:var(--accent);text-decoration:none;font-weight:600;font-size:15px}h1{font-size:28px;margin-bottom:8px}h2{font-size:20px;margin:32px 0 16px}.post{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin-bottom:16px;transition:box-shadow .2s}.post:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}.post h3{font-size:18px;margin-bottom:6px}.post h3 a{color:#1a1a2e;text-decoration:none}.post h3 a:hover{color:var(--accent)}.post .desc{color:var(--muted);font-size:14px;margin-bottom:8px}.post .date{font-size:12px;color:#b2bec3}footer{background:var(--card);border-top:1px solid var(--border);margin-top:48px;padding:24px 0;text-align:center;font-size:14px;color:var(--muted)}footer a{color:var(--accent);text-decoration:none;margin:0 12px}</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2310449688342897" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div style="background:#1a1a2e;color:#fff;text-align:center;padding:6px 12px;font-size:13px;display:flex;justify-content:center;align-items:center;gap:4px;flex-wrap:wrap">
-    <span style="opacity:.7">🌐</span>
-    <a href="/blog/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">中文</a>
-    <span style="opacity:.3">|</span>
-    <a href="/en/blog/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.15)">English</a>
-    <span style="opacity:.3">|</span>
-    <a href="/de/blog/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Deutsch</a>
-    <span style="opacity:.3">|</span>
-    <a href="/fr/blog/" style="color:#fff;text-decoration:none;padding:2px 8px;border-radius:4px">Français</a>
-  </div>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K862TX7R" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <header><div class="container"><a href="/en/">← Home</a><span style="color:var(--muted)">|</span><a href="/en/image-compress/">Image Compress</a><a href="/en/pdf-tools/">PDF Tools</a></div></header>
-  <main class="container">
-    <h1>📝 DeeperAI Tools Blog</h1>
-    <p style="color:var(--muted);margin-bottom:28px">Image compression tutorials, PDF guides, format comparisons — practical tips for your workflow.</p>
 
-    <div class="post">
-      <h3><a href="/en/blog/best-free-image-compressor-2026.html">5 Best Free Image Compressors in 2026 — Tested and Compared</a></h3>
-      <p class="desc">We tested the top 5 free online image compressors. Compare compression ratios, privacy, and format support.</p>
-      <span class="date">2026-05-24</span>
+  <div class="lang-bar">
+    <a href="/blog/">中文</a>
+    <span class="sep">·</span>
+    <a href="/en/blog/" class="current">English</a>
+    <span class="sep">·</span>
+    <a href="/de/blog/">Deutsch</a>
+    <span class="sep">·</span>
+    <a href="/fr/blog/">Français</a>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/en/" class="nav-brand">Deeper<span class="accent">Tools</span></a>
+      <button class="nav-toggle" onclick="this.parentElement.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="/en/">Home</a>
+        <a href="/en/image-compress/">Image Compress</a>
+        <a href="/en/pdf-tools/">PDF Tools</a>
+        <a href="/en/blog/" class="active">Blog</a>
+      </div>
     </div>
-    <div class="post">
-      <h3><a href="/en/blog/how-to-compress-images-for-web.html">How to Compress Images for Web: The Complete Guide (2026)</a></h3>
-      <p class="desc">Learn how to compress images for the web. Format selection, responsive images, and real-world savings.</p>
-      <span class="date">2026-05-24</span>
-    </div>
-    <div class="post">
-      <h3><a href="/en/blog/merge-pdf-files-free-guide.html">How to Merge PDF Files for Free — No Upload Required (2026)</a></h3>
-      <p class="desc">Combine PDFs in your browser. No uploads, no signup, completely free.</p>
-      <span class="date">2026-05-24</span>
-    </div>
-    <div class="post">
-      <h3><a href="/en/blog/jpeg-vs-png-vs-webp-guide.html">JPEG vs PNG vs WebP vs AVIF: Which Image Format in 2026?</a></h3>
-      <p class="desc">Comprehensive comparison with real file size data. JPEG, PNG, WebP, and AVIF explained.</p>
-      <span class="date">2026-05-24</span>
-    </div>
-    <div class="post">
-      <h3><a href="/en/blog/compress-pdf-file-size-guide.html">How to Compress PDF File Size — The Complete Guide</a></h3>
-      <p class="desc">Practical methods to reduce PDF file size without losing quality. Browser-based and command-line approaches.</p>
-      <span class="date">2026-05-24</span>
-    </div>
-    <div class="post">
-      <h3><a href="/en/blog/split-pdf-online-free.html">How to Split PDF Online for Free — Complete Guide</a></h3>
-      <p class="desc">Split PDF files online without uploading to any server. Step-by-step browser-local guide.</p>
-      <span class="date">2026-05-24</span>
-    </div>
+  </nav>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <h1>DeeperAI Blog</h1>
+        <p>Guides, tips, and tutorials for image compression, PDF processing, and online tools.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="blog-layout">
+        <div class="blog-grid">
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/best-free-image-compressor-2026.html">Best Free Online Image Compressors in 2026</a></h3>
+            <p class="excerpt">We tested the top free image compression tools. Here are the results for JPG, PNG, and WebP — quality, speed, and privacy compared.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/how-to-compress-images-for-web.html">How to Compress Images for Web: Complete Guide</a></h3>
+            <p class="excerpt">Learn the right way to compress images for websites. Find the balance between file size and quality for faster loading pages.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/merge-pdf-files-free-guide.html">How to Merge PDF Files Online for Free</a></h3>
+            <p class="excerpt">Merge multiple PDFs into one document without installing software. Browser-local processing keeps your files private.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/jpeg-vs-png-vs-webp-guide.html">JPEG vs PNG vs WebP: Which Format Should You Use?</a></h3>
+            <p class="excerpt">Compare image formats: when to use JPEG, PNG, or WebP. Quality benchmarks and file size comparisons for each format.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/compress-pdf-file-size-guide.html">How to Compress PDF File Size Without Losing Quality</a></h3>
+            <p class="excerpt">Reduce PDF file sizes from 50MB to under 1MB. Step-by-step guide with quality comparisons.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/split-pdf-online-free.html">Split PDF Online Free — Extract Pages Instantly</a></h3>
+            <p class="excerpt">Extract specific pages or split large PDFs into separate files. Free, no account needed, local processing.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/add-watermark-pdf-guide.html">How to Add Watermark to PDF: Free Methods</a></h3>
+            <p class="excerpt">Protect your documents by adding watermarks. Free methods including online tools and desktop software.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/batch-image-compression-guide.html">Batch Image Compression: Compress Hundreds at Once</a></h3>
+            <p class="excerpt">Save hours by processing hundreds of images at once. Best batch compression tools and techniques for 2026.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/online-tools-privacy-comparison.html">Online Tools Privacy Comparison: Which Keeps Your Data Safe?</a></h3>
+            <p class="excerpt">Not all online tools are equal. Compare the privacy policies and data handling of popular online file converters.</p>
+          </article>
+
+          <article class="blog-card">
+            <time>2026-05-24</time>
+            <h3><a href="/en/blog/why-image-compression-matters-seo.html">Why Image Compression Matters for SEO in 2026</a></h3>
+            <p class="excerpt">Compressed images rank better. Learn why image optimization directly impacts your search rankings and Core Web Vitals.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><div class="container"><a href="/en/">Home</a><a href="/en/image-compress/">Image Compress</a><a href="/en/pdf-tools/">PDF Tools</a><a href="/en/privacy.html">Privacy</a><a href="/en/blog/">Blog</a><p style="margin-top:12px">© 2026 DeeperAI Tools</p></div></footer>
-</body></html>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <a href="/en/privacy.html">Privacy</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/contact.html">Contact</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="/blog/">中文</a>
+      </nav>
+      <p class="copy">&copy; 2026 DeeperAI Tools &mdash; All processing done locally in your browser</p>
+    </div>
+  </footer>
+</body>
+</html>

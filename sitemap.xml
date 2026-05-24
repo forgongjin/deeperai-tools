@@ -1,107 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Main Site -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://deeperai.cloud/</loc>
-    <priority>1.0</priority>
+    <loc>https://deeperai.cloud/./about.html</loc>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- Tools -->
-  <url>
-    <loc>https://deeperai.cloud/image-toolbox/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/pdf-toolbox/</loc>
-    <priority>0.9</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Essential Pages -->
-  <url>
-    <loc>https://deeperai.cloud/privacy.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://deeperai.cloud/about.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://deeperai.cloud/contact.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Blog Index -->
-  <url>
-    <loc>https://deeperai.cloud/blog/</loc>
-    <priority>0.7</priority>
+    <loc>https://deeperai.cloud/./contact.html</loc>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-
-  <!-- Chinese Blog Articles -->
-  <url>
-    <loc>https://deeperai.cloud/blog/image-compressor-comparison.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/blog/zenme-yasuo-tupian.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/blog/pdf-hebing-chaifen-jiaocheng.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./privacy.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/blog/pdf-zenme-yasuo.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- English Pages -->
-  <url>
-    <loc>https://deeperai.cloud/en/privacy.html</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./image-toolbox/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/en/about.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./pdf-toolbox/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/en/contact.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- English Blog Articles -->
-  <url>
-    <loc>https://deeperai.cloud/en/blog/best-free-image-compressor-2026.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./blog/image-compressor-comparison.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/en/blog/how-to-compress-images-for-web.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./blog/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/en/blog/merge-pdf-files-free-guide.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./blog/pdf-hebing-chaifen-jiaocheng.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://deeperai.cloud/en/blog/jpeg-vs-png-vs-webp-guide.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://deeperai.cloud/./blog/pdf-zenme-yasuo.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./blog/zenme-yasuo-tupian.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/about.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/contact.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/privacy.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/image-compress/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/blog/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./de/pdf-tools/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/about.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/contact.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/privacy.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/image-compress/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/blog/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./fr/pdf-tools/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/about.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/contact.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/privacy.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/image-compress/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/add-watermark-pdf-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/batch-image-compression-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/best-free-image-compressor-2026.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/compress-pdf-file-size-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/how-to-compress-images-for-web.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/jpeg-vs-png-vs-webp-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/merge-pdf-files-free-guide.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/online-tools-privacy-comparison.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/split-pdf-online-free.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/blog/why-image-compression-matters-seo.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://deeperai.cloud/./en/pdf-tools/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

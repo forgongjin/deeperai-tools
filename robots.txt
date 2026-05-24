@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://deeperai.cloud/sitemap.xml
-
-# Crawl-delay to be respectful to our GitHub Pages hosting
-Crawl-delay: 10
