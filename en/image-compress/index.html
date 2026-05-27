@@ -334,7 +334,7 @@
     <h3>Key Features</h3>
     <ul>
       <li><strong>100% Private:</strong> No upload, no server — your images never leave your device.</li>
-      <li><strong>Batch Processing:</strong> Compress up to 20 images at once (free tier).</li>
+      <li><strong>Batch Processing:</strong> Compress multiple images at once — no limits.</li>
       <li><strong>Format Conversion:</strong> Convert between JPG, PNG, and WebP formats.</li>
       <li><strong>Quality Control:</strong> Adjust compression level from 10% to 100%.</li>
       <li><strong>Image Resizing:</strong> Set maximum width to resize large images automatically.</li>
@@ -346,7 +346,7 @@
   </div>
 
   <script>
-    const MAX_FREE = 20
+    const MAX_FREE = 999 // FREENOW: unlimited
     const state = { files: [], results: [] }
 
     function addFiles(fileList) {
@@ -361,7 +361,8 @@
             state.results.push(null)
           }
         }
-        alert(`Free tier limit: ${MAX_FREE} images per batch. You selected ${totalAfter} images. Only the first ${MAX_FREE} were added.`)
+        // FREENOW: no limit — silently add what fits within browser memory
+        alert(`Adding ${Math.min(totalAfter, MAX_FREE)} images. For best performance, consider processing in smaller batches.`)
       } else {
         for (const file of newFiles) {
           state.files.push(file)

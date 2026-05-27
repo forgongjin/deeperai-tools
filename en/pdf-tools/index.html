@@ -387,7 +387,7 @@
       <li><strong>No Registration:</strong> Start using immediately — no account, no email, no signup required.</li>
       <li><strong>Works Offline:</strong> Once loaded, the tools work even without an internet connection.</li>
       <li><strong>Cross-Platform:</strong> Works on desktop, tablet, and mobile — fully responsive design.</li>
-      <li><strong>Free to Use:</strong> All basic features are completely free with generous limits.</li>
+      <li><strong>100% Free:</strong> All features are completely free. No limits, no watermarks.</li>
     </ul>
 
     <h3>Common Use Cases</h3>
@@ -408,8 +408,8 @@
       watermark: { file: null, result: null }
     }
     let currentTool = 'merge'
-    const MAX_FREE_FILES = 5
-    const MAX_FREE_SIZE = 10 * 1024 * 1024
+    const MAX_FREE_FILES = 999 // FREENOW: unlimited
+    const MAX_FREE_SIZE = 999 * 1024 * 1024 // FREENOW: unlimited
 
     function switchTool(tool) {
       currentTool = tool
@@ -445,8 +445,8 @@
     function addMergeFiles(fileList) {
       const newFiles = Array.from(fileList).filter(f => f.type === 'application/pdf' || f.name.endsWith('.pdf'))
       if (state.merge.files.length + newFiles.length > MAX_FREE_FILES) {
-        alert(`Free tier limit: ${MAX_FREE_FILES} files per merge. Only the first ${MAX_FREE_FILES} will be kept.`)
-        state.merge.files.push(...newFiles.slice(0, MAX_FREE_FILES - state.merge.files.length))
+        // FREENOW: no hard limit — add all files
+        state.merge.files.push(...newFiles)
       } else {
         state.merge.files.push(...newFiles)
       }
@@ -614,7 +614,7 @@
       const file = state.compress.file
       if (!file) return
       if (file.size > MAX_FREE_SIZE) {
-        alert('Free tier limit: files up to 10MB. This file is ' + formatSize(file.size) + '.')
+        alert('This file is ' + formatSize(file.size) + '. Large files may take longer to process.')
         return
       }
       const btn = document.getElementById('compressBtn')
